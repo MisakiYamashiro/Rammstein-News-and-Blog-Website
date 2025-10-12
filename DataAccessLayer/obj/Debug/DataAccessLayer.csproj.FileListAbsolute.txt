@@ -1,0 +1,12 @@
+C:\Users\efepa\source\repos\RammsteinNewsBlog\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\efepa\source\repos\RammsteinNewsBlog\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\efepa\source\repos\RammsteinNewsBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\efepa\source\repos\RammsteinNewsBlog\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\efepa\source\repos\RammsteinNewsBlog\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\efepa\source\repos\RammsteinNewsBlog\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\efepa\OneDrive\Documenti\GitHub\Projects-Homeworks\RammsteinBlogWebApp\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Projects-Homeworks\RammsteinBlogWebApp\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\efepa\OneDrive\Documenti\GitHub\Projects-Homeworks\RammsteinBlogWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\efepa\OneDrive\Documenti\GitHub\Projects-Homeworks\RammsteinBlogWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\efepa\OneDrive\Documenti\GitHub\Projects-Homeworks\RammsteinBlogWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Projects-Homeworks\RammsteinBlogWebApp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -1,0 +1,51 @@
+﻿* {
+    margin:0;
+    padding:0;
+}
+body {
+    font-family:Calibri;
+}
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #212121;
+}
+.solkisim {
+    float: left;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+    .solkisim label {
+        color: white;
+        font-family:Bahnschrift;
+        font-size:22pt;
+        font-weight:500;
+    }
+    .solkisim img {
+        width: 120px;
+        height: 80px;
+    }
+.sagkisim {
+    float:right;
+    padding:35px;
+}
+    .sagkisim span {
+        color:white;
+        font-size:15pt;
+        margin:10px;
+    }
+    .sagkisim a {
+        text-decoration:none;
+        color:white;
+        font-size:15pt;
+        margin:10px;
+    }
+.sidebar {
+    background-color: #333333;
+    width: 280px;
+    height:847px;
+}
+.tasiyici {
+    display:flex;
+}

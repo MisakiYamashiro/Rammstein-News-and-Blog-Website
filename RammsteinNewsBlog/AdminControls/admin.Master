@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="RammsteinNewsBlog.AdminControls.admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Assets\CSS\MasterStyle.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="header">
+                <div class="solkisim">
+                    <img src="Assets/rm1.png" alt="Rammstein Logo" />
+                    <label>RammAdmin</label>
+                </div>
+                <div class="sagkisim">
+                    <asp:Label ID="lbl_admin" runat="server"></asp:Label>
+                    <asp:LinkButton ID="lbtn_logout" runat="server" Text="Çıkış Yap" OnClick="lbtn_logout_Click"></asp:LinkButton>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="tasiyici">
+                <div class="sidebar"></div>
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</body>
+</html>
