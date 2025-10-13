@@ -56,6 +56,7 @@ create table Articles
 	Upvote int,
 	Downvote int,
 	Views int,
+	Allow_Comments bit,
 	constraint fk_ArticleType foreign key(TypeID)
 	references Types(TypeID),
 	constraint fk_ArticleCategory foreign key(CategoryID)
@@ -75,4 +76,28 @@ create table Comments
 	Downvote int,
 	constraint fk_CommentUser foreign key(UserID)
 	references Users(UserID)
+)
+go
+create table Soft_Deleted_Comments
+(
+ID int primary key identity(1,1),
+CommentID int,
+Reason nvarchar(100),
+constraint fk_CommentSoft foreign key(CommentID) references Comments(CommentID)
+)
+go
+create table Banned_Users
+(
+ID int primary key identity(1,1),
+UserID int,
+constraint fk_BannedUser foreign key(UserID) references Users(UserID)
+)
+go
+create table Comments_Reply 
+(
+main_commentID int,
+reply_commentID int,
+constraint pk_commentsreply primary key(main_commentID, reply_commentID),
+constraint fk_maincomment foreign key(main_commentID) references Comments(CommentID),
+constraint fk_replycomment foreign key(reply_commentID) references Comments(CommentID)
 )
