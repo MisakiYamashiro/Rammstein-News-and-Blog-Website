@@ -1,0 +1,102 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\source\\repos\\rammprotocol\\rammprotocol\\adminpage\\signcontrols\\login.aspx||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
+      "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\adminpage\\signcontrols\\login.aspx||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\source\\repos\\rammprotocol\\rammprotocol\\adminpage\\signcontrols\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\adminpage\\signcontrols\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB08945D-1142-4D2A-A268-D5D88C5D64B1}|DataAL\\DataAL.csproj|c:\\users\\efepa\\source\\repos\\rammprotocol\\dataal\\constrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB08945D-1142-4D2A-A268-D5D88C5D64B1}|DataAL\\DataAL.csproj|solutionrelative:dataal\\constrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB08945D-1142-4D2A-A268-D5D88C5D64B1}|DataAL\\DataAL.csproj|c:\\users\\efepa\\source\\repos\\rammprotocol\\dataal\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB08945D-1142-4D2A-A268-D5D88C5D64B1}|DataAL\\DataAL.csproj|solutionrelative:dataal\\datamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 528,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\RammProtocol\\AdminPage\\SignControls\\Login.aspx",
+              "RelativeDocumentMoniker": "RammProtocol\\AdminPage\\SignControls\\Login.aspx",
+              "ToolTip": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\RammProtocol\\AdminPage\\SignControls\\Login.aspx",
+              "RelativeToolTip": "RammProtocol\\AdminPage\\SignControls\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-10-16T21:21:57.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataModel.cs",
+              "DocumentMoniker": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\DataAL\\DataModel.cs",
+              "RelativeDocumentMoniker": "DataAL\\DataModel.cs",
+              "ToolTip": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\DataAL\\DataModel.cs",
+              "RelativeToolTip": "DataAL\\DataModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T21:20:16.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConStrings.cs",
+              "DocumentMoniker": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\DataAL\\ConStrings.cs",
+              "RelativeDocumentMoniker": "DataAL\\ConStrings.cs",
+              "ToolTip": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\DataAL\\ConStrings.cs",
+              "RelativeToolTip": "DataAL\\ConStrings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T21:18:42.749Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 528,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.css",
+              "DocumentMoniker": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\RammProtocol\\AdminPage\\SignControls\\CSS\\Login.css",
+              "RelativeDocumentMoniker": "RammProtocol\\AdminPage\\SignControls\\CSS\\Login.css",
+              "ToolTip": "C:\\Users\\efepa\\source\\repos\\RammProtocol\\RammProtocol\\AdminPage\\SignControls\\CSS\\Login.css",
+              "RelativeToolTip": "RammProtocol\\AdminPage\\SignControls\\CSS\\Login.css",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwCMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-16T21:22:34.052Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
