@@ -1,0 +1,93 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.left {
+    float: left;
+}
+
+body {
+    background-color: dimgray;
+    font-family: Inter;
+}
+
+.left img {
+    width: 1467px;
+    height: 960px;
+    opacity: 0.6;
+}
+
+.right {
+    background-color: white;
+    float: right;
+    width: 400px;
+    height: 960px;
+}
+
+.InputBox {
+    margin-left: 50px;
+    margin-top: 20px;
+    align-content: center;
+}
+
+    .InputBox input {
+        color: black;
+        border: 1px solid gray;
+        width: 280px;
+        height: 35px;
+        border-radius: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .InputBox label {
+        font-size: 13pt;
+    }
+    .InputBox input value {
+        font-size:18pt;
+    }
+
+.buton input {
+    width: 200px;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    margin: 30px 90px;
+    font-size: 15pt;
+    /*   font-weight: 700;*/
+}
+
+    .buton input:hover {
+    }
+
+.baslik h3 {
+    margin: 20px;
+    margin-bottom: 0;
+    font-size: 16pt;
+}
+
+.baslik h4 {
+    margin: 20px;
+    margin-top: 0;
+    color: gray;
+    font-weight: 300;
+    font-size: 14pt;
+}
+
+.login {
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.baslik {
+    margin: 10px;
+}
+
+.panel {
+    border: 1px solid silver;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: lightgray;
+}
+

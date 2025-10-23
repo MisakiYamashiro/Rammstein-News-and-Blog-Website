@@ -57,3 +57,5 @@ C:\Users\efepa\source\repos\RammProtocol\RammProtocol\obj\Debug\RammProtocol.csp
 C:\Users\efepa\source\repos\RammProtocol\RammProtocol\obj\Debug\RammProt.9324F510.Up2Date
 C:\Users\efepa\source\repos\RammProtocol\RammProtocol\obj\Debug\RammProtocol.dll
 C:\Users\efepa\source\repos\RammProtocol\RammProtocol\obj\Debug\RammProtocol.pdb
+C:\Users\efepa\source\repos\RammProtocol\RammProtocol\bin\DataAL.dll
+C:\Users\efepa\source\repos\RammProtocol\RammProtocol\bin\DataAL.pdb

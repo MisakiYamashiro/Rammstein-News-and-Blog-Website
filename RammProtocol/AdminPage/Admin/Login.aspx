@@ -1,4 +1,4 @@
-﻿<%@ page language="C#" autoeventwireup="true" codebehind="Login.aspx.cs" inherits="RammProtocol.AdminPage.SignControls.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="RammProtocol.AdminPage.SignControls.Login" %>
 
 <!DOCTYPE html>
 
@@ -15,22 +15,25 @@
         <div>
             <div class="tasiyici">
                 <div class="loginBox">
+                    <asp:Panel ID="pnl_yes" runat="server" CssClass="panel" Visible="false">
+                        <asp:Label ID="lbl_yes" runat="server" Text="exampleYES" Visible="false" ></asp:Label>
+                    </asp:Panel>
                     <h3>Login Page</h3>
                     <h4>Please Enter Your Details.</h4>
-                    
+
                     <div class="textbox">
-                        <label style="margin-top: 30px;">Username</label>
+                        <label style="margin-top: 30px;">Mail</label>
                         <br />
-                        <asp:TextBox ID="tb_username" runat="server" ></asp:TextBox>
+                        <asp:TextBox ID="tb_mail" runat="server"></asp:TextBox>
                     </div>
-                    
+
                     <div class="textbox">
                         <label>Password</label>
                         <br />
-                        <asp:TextBox ID="tb_password" runat="server"  TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="tb_password" runat="server" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="buton">
-                        <asp:Button ID="btn_login" runat="server" text="Login" />
+                        <asp:Button ID="btn_login" runat="server" Text="Login" OnClick="btn_login_Click" />
                     </div>
                 </div>
             </div>

@@ -67,21 +67,50 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AdminPage\SignControls\CSS\Login.css" />
-    <Content Include="AdminPage\SignControls\Login.aspx" />
+    <Content Include="AdminPage\Admin\Assets\CSS\AdminCSS.css" />
+    <Content Include="AdminPage\Admin\Assets\Img\rm1.png" />
+    <Content Include="AdminPage\Admin\Assets\Img\rm2.png" />
+    <Content Include="AdminPage\Admin\Default.aspx" />
+    <Content Include="AdminPage\Admin\Assets\CSS\Login.css" />
+    <Content Include="AdminPage\Admin\Assets\Img\004.jpg" />
+    <Content Include="AdminPage\Admin\Login.aspx" />
+    <Content Include="AdminPage\Admin\LoginNew.aspx" />
+    <Content Include="AdminPage\Admin\Assets\CSS\LoginNew.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminPage\SignControls\Login.aspx.cs">
+    <Compile Include="AdminPage\Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdminPage\SignControls\Login.aspx.designer.cs">
+    <Compile Include="AdminPage\Admin\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\LoginNew.aspx.cs">
+      <DependentUpon>LoginNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\LoginNew.aspx.designer.cs">
+      <DependentUpon>LoginNew.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage\Admin\Admin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +121,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="RammProtocol\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAL\DataAL.csproj">
+      <Project>{db08945d-1142-4d2a-a268-d5d88c5d64b1}</Project>
+      <Name>DataAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

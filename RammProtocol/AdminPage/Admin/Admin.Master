@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="RammProtocol.AdminPage.Admin.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>RammProtocol Admin Panel</title>
+    <link href="Assets\CSS\AdminCSS.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container">
+                <div class="header">
+                    <div class="left">
+                        <div class="logo-title">
+                            <img src="Assets/Img/rm2.png" alt="Rammstein Logo" />
+                            <label class="header-title" style="color:#D5B884">Rammstein Protocol Admin</label>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="admin-controls">
+                            <asp:Label ID="lbl_admin" runat="server" Text="Deneme"></asp:Label>
+                            <asp:LinkButton ID="lbtn_cikisyap" runat="server" OnClick="lbtn_cikisyap_Click" Text="Sign Out"></asp:LinkButton>
+                        </div>
+
+                    </div>
+                </div>
+                    <div class="sidebar">
+
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="buttons">
+                        <asp:Button ID="btn_articlecontrols" runat="server" Text="Article Controls" OnClick="btn_articlecontrols_Click"/>
+                        <asp:Button ID="btn_typecontrols" runat="server" Text="Type Controls" OnClick="btn_typecontrols_Click" />
+                        <asp:Button ID="btn_categorycontrols" runat="server" Text="Category Controls" OnClick="btn_categorycontrols_Click" />
+                        <asp:Button ID="btn_usercontrols" runat="server" Text="User Controls" OnClick="btn_usercontrols_Click"/>
+                        <asp:Button ID="btn_commentscontrols" runat="server" Text="Comments Controls" OnClick="btn_commentscontrols_Click" />
+                    </div>
+
+                </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

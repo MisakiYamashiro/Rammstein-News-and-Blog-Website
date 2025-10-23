@@ -6,6 +6,7 @@
 body {
     font-family: Inter;
     background-color: dimgray;
+
 }
 
 .tasiyici {
@@ -15,10 +16,10 @@ body {
 
 .loginBox {
     width: 350px;
-    height: 350px;
     border: 1px solid white;
     background-color: white;
     border-radius: 10%;
+    padding:10px;
     box-shadow: 8px 5px 90px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: 8px 5px 90px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 8px 5px 90px 0px rgba(0,0,0,0.75);
@@ -38,6 +39,14 @@ body {
         margin-left: 9px;
         color: gray;
     }
+    .loginBox span {
+        display:flex;
+        text-align:center;
+        justify-content:center;
+        font-size:12pt;
+        margin-left:9px;
+    }
+
 
 .textbox {
     margin-left: 50px;
@@ -60,10 +69,19 @@ body {
     }
 
 .buton input {
-    width:180px;
-    height:40px;
-    border:1px solid gray;
-    border-radius:15px;
-    margin:30px 80px;
-    font-size:13pt;
+    width: 180px;
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin: 30px 80px;
+    font-size: 15pt;
+ /*   font-weight: 700;*/
 }
+.panel {
+    border: 1px solid silver;
+    padding:10px;
+    border-radius:30px;
+    background-color:lightgray;
+}
+
+

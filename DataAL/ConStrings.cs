@@ -8,6 +8,6 @@ namespace DataAL
 {
     public class ConStrings
     {
-        public static string LocalString = @"Data Source=MISAKIEFE\SQLEXPRESS; Initial Catalog=RammsteinBlogWebAppDB; Integrated Security=true";
+        public static string LocalString = @"Data Source=MISAKIEFE\SQLEXPRESS; Initial Catalog=RammsteinBlogWebAppDB;Integrated Security=True";
     }
 }
