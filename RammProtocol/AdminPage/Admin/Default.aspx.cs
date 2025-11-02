@@ -13,7 +13,8 @@ namespace RammProtocol.AdminPage.Admin
         DataModel data = new DataModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            lbl_membercount.Text = data.CheckMemberCount();
+            lbl_articlecount.Text = data.CheckArticleCount();
         }
     }
 }

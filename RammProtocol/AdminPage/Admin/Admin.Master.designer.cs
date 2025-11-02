@@ -60,15 +60,6 @@ namespace RammProtocol.AdminPage.Admin
         protected global::System.Web.UI.WebControls.Button btn_articlecontrols;
 
         /// <summary>
-        /// btn_typecontrols control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_typecontrols;
-
-        /// <summary>
         /// btn_categorycontrols control.
         /// </summary>
         /// <remarks>

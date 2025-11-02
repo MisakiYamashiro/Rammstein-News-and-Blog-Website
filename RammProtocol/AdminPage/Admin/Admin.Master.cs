@@ -34,7 +34,14 @@ namespace RammProtocol.AdminPage.Admin
 
         protected void btn_articlecontrols_Click(object sender, EventArgs e)
         {
-
+            if (Session["Admin"] != null)
+            {
+                Response.Redirect("ArticleControls.aspx");
+            }
+            else
+            {
+                Response.Redirect("LoginNew.aspx", false);
+            }
         }
 
         protected void btn_typecontrols_Click(object sender, EventArgs e)
@@ -44,7 +51,14 @@ namespace RammProtocol.AdminPage.Admin
 
         protected void btn_categorycontrols_Click(object sender, EventArgs e)
         {
-
+            if (Session["Admin"] != null)
+            {
+                Response.Redirect("CategoryControls.aspx");
+            }
+            else
+            {
+                Response.Redirect("LoginNew.aspx", false);
+            }
         }
 
         protected void btn_usercontrols_Click(object sender, EventArgs e)

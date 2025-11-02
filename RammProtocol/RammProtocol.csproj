@@ -67,24 +67,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminPage\Admin\AddCategory.aspx" />
+    <Content Include="AdminPage\Admin\Add_Article.aspx" />
     <Content Include="AdminPage\Admin\Assets\CSS\AdminCSS.css" />
+    <Content Include="AdminPage\Admin\Assets\Img\members.svg" />
+    <Content Include="AdminPage\Admin\Assets\Img\newspaper.svg" />
     <Content Include="AdminPage\Admin\Assets\Img\rm1.png" />
     <Content Include="AdminPage\Admin\Assets\Img\rm2.png" />
+    <Content Include="AdminPage\Admin\CategoryControls.aspx" />
+    <Content Include="AdminPage\Admin\CategoryEdit.aspx" />
     <Content Include="AdminPage\Admin\Default.aspx" />
     <Content Include="AdminPage\Admin\Assets\CSS\Login.css" />
     <Content Include="AdminPage\Admin\Assets\Img\004.jpg" />
     <Content Include="AdminPage\Admin\Login.aspx" />
     <Content Include="AdminPage\Admin\LoginNew.aspx" />
     <Content Include="AdminPage\Admin\Assets\CSS\LoginNew.css" />
+    <Content Include="AdminPage\Admin\ArticleControls.aspx" />
+    <Content Include="AdminPage\Admin\EditArticle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminPage\Admin\AddCategory.aspx.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\AddCategory.aspx.designer.cs">
+      <DependentUpon>AddCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\Add_Article.aspx.cs">
+      <DependentUpon>Add_Article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\Add_Article.aspx.designer.cs">
+      <DependentUpon>Add_Article.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage\Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPage\Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\CategoryControls.aspx.cs">
+      <DependentUpon>CategoryControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\CategoryControls.aspx.designer.cs">
+      <DependentUpon>CategoryControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\CategoryEdit.aspx.cs">
+      <DependentUpon>CategoryEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\CategoryEdit.aspx.designer.cs">
+      <DependentUpon>CategoryEdit.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminPage\Admin\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -107,6 +143,20 @@
     <Compile Include="AdminPage\Admin\LoginNew.aspx.designer.cs">
       <DependentUpon>LoginNew.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage\Admin\ArticleControls.aspx.cs">
+      <DependentUpon>ArticleControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\ArticleControls.aspx.designer.cs">
+      <DependentUpon>ArticleControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\EditArticle.aspx.cs">
+      <DependentUpon>EditArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\EditArticle.aspx.designer.cs">
+      <DependentUpon>EditArticle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +170,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AdminPage\Admin\Assets\ArticleImgs\" />
     <Folder Include="RammProtocol\" />
   </ItemGroup>
   <ItemGroup>
