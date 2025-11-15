@@ -12,14 +12,14 @@ namespace DataAL
     {
         SqlConnection con;
         SqlCommand cmd;
-        
+
         public DataModel()
         {
             con = new SqlConnection(ConStrings.LocalString);
             cmd = con.CreateCommand();
         }
 
-       
+
         public Users Login(string username, string password)
         {
             try
@@ -56,7 +56,7 @@ namespace DataAL
                 {
                     return null;
                 }
-            } 
+            }
             catch { return null; }
             finally { con.Close(); }
         }
@@ -82,7 +82,7 @@ namespace DataAL
                 con.Close();
             }
 
-            
+
         }
         public string CheckArticleCount()
         {
@@ -105,7 +105,7 @@ namespace DataAL
                 con.Close();
             }
 
-            
+
         }
         #region Types
         public List<Types> GetTypes()
@@ -117,7 +117,7 @@ namespace DataAL
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
                     Types type = new Types();
@@ -129,12 +129,12 @@ namespace DataAL
                     }
                     else
                     {
-                        type.IsActiveStr = "Not Active"; 
+                        type.IsActiveStr = "Not Active";
                     }
                     types.Add(type);
                 }
                 return types;
-                
+
             }
             catch
             {
@@ -172,7 +172,7 @@ namespace DataAL
                     {
                         category.IsActiveStr = "Not Active";
                     }
-                        categories.Add(category);
+                    categories.Add(category);
                 }
                 return categories;
 
@@ -198,7 +198,7 @@ namespace DataAL
                 Category category = new Category();
                 while (reader.Read())
                 {
-                    
+
                     category.CategoryID = reader.GetInt32(0);
                     category.Name = reader.GetString(1);
                     category.IsActive = reader.GetBoolean(2);
@@ -227,7 +227,7 @@ namespace DataAL
         {
             try
             {
-                cmd.CommandText= "update Categories set Name=@n, IsActive=@ia where CategoryID=@id";
+                cmd.CommandText = "update Categories set Name=@n, IsActive=@ia where CategoryID=@id";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@n", category.Name);
                 cmd.Parameters.AddWithValue("@ia", category.IsActive);
@@ -278,7 +278,7 @@ namespace DataAL
             }
             catch
             {
-                
+
             }
             finally
             {
@@ -295,7 +295,7 @@ namespace DataAL
                 con.Open();
                 cmd.ExecuteNonQuery();
             }
-            
+
             finally
             {
                 con.Close();
@@ -321,19 +321,32 @@ namespace DataAL
                 con.Close();
             }
         }
-
-        public List<Articles> GetArticles()
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="num">true = returns isactive true false = you understand.</param>
+        /// <returns></returns>
+        public List<Articles> GetArticles(bool num)
         {
+            string query = "select A.ArticleID, T.TypeID, T.Name, C.CategoryID, C.Name, U.UserID, U.Username, A.Title, A.Content, A.Date, A.UpdateDate, A.Upvote, A.Downvote, A.Views, A.Allow_Comments, A.IsActive, A.ImgLocation from Articles as A join Types as T on A.TypeID = T.TypeID join Categories as C on A.CategoryID = C.CategoryID join Users as U on A.AuthorID = U.UserID";
             List<Articles> articles = new List<Articles>();
             try
             {
-                cmd.CommandText = "select A.ArticleID, T.TypeID, T.Name, C.CategoryID, C.Name, U.UserID, U.Username, A.Title, A.Content, A.Date, A.UpdateDate, A.Upvote, A.Downvote, A.Views, A.Allow_Comments, A.IsActive, A.ImgLocation from Articles as A join Types as T on A.TypeID = T.TypeID join Categories as C on A.CategoryID = C.CategoryID join Users as U on A.AuthorID = U.UserID";
+                if (num == true)
+                {
+                    cmd.CommandText = query + " where A.IsActive=1 ";
+                }
+                else if (num == false)
+                {
+                    cmd.CommandText = query;
+                }
+
                 cmd.Parameters.Clear();
                 con.Open();
                 SqlDataReader r = cmd.ExecuteReader();
                 while (r.Read())
                 {
-                    Articles article = new Articles();  
+                    Articles article = new Articles();
                     article.ArticleID = r.GetInt32(0);
                     article.TypeID = r.GetInt32(1);
                     article.TypeStr = r.GetString(2);
@@ -343,7 +356,69 @@ namespace DataAL
                     article.AuthorNameStr = r.GetString(6);
                     article.Title = r.GetString(7);
                     article.Content = r.GetString(8);
-                    article.Date = r.GetDateTime(9);
+                    article.Date = r.GetDateTime(9).Date;
+                    article.ShortDate = r.GetDateTime(9).ToShortDateString();
+                    article.UpdateDate = r.GetDateTime(10);
+                    article.Upvote = r.GetInt32(11);
+                    article.Downvote = r.GetInt32(12);
+                    article.Views = r.GetInt32(13);
+                    article.AllowComments = r.GetBoolean(14);
+                    article.IsActive = r.GetBoolean(15);
+                    article.ImgLocation = r.GetString(16);
+                    if (article.AllowComments)
+                    {
+                        article.AllowCommentsStr = "Allowed";
+                    }
+                    else
+                    {
+                        article.AllowCommentsStr = "Not Allowed";
+                    }
+                    if (article.IsActive)
+                    {
+                        article.IsActiveStr = "Active";
+                    }
+                    else
+                    {
+                        article.IsActiveStr = "Not Active";
+                    }
+                    articles.Add(article);
+                }
+                return articles;
+
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public List<Articles> GetArticles()
+        {
+
+            List<Articles> articles = new List<Articles>();
+            try
+            {
+                cmd.CommandText = "select A.ArticleID, T.TypeID, T.Name, C.CategoryID, C.Name, U.UserID, U.Username, A.Title, A.Content, A.Date, A.UpdateDate, A.Upvote, A.Downvote, A.Views, A.Allow_Comments, A.IsActive, A.ImgLocation from Articles as A join Types as T on A.TypeID = T.TypeID join Categories as C on A.CategoryID = C.CategoryID join Users as U on A.AuthorID = U.UserID";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader r = cmd.ExecuteReader();
+                while (r.Read())
+                {
+                    Articles article = new Articles();
+                    article.ArticleID = r.GetInt32(0);
+                    article.TypeID = r.GetInt32(1);
+                    article.TypeStr = r.GetString(2);
+                    article.CategoryID = r.GetInt32(3);
+                    article.CategoryStr = r.GetString(4);
+                    article.AuthorID = r.GetInt32(5);
+                    article.AuthorNameStr = r.GetString(6);
+                    article.Title = r.GetString(7);
+                    article.Content = r.GetString(8);
+                    article.Date = r.GetDateTime(9).Date;
+                    article.ShortDate = r.GetDateTime(9).ToShortDateString();
                     article.UpdateDate = r.GetDateTime(10);
                     article.Upvote = r.GetInt32(11);
                     article.Downvote = r.GetInt32(12);
@@ -391,10 +466,10 @@ namespace DataAL
                 con.Open();
                 SqlDataReader r = cmd.ExecuteReader();
                 Articles article = new Articles();
-                
+
                 while (r.Read())
                 {
-                    
+
                     article.ArticleID = r.GetInt32(0);
                     article.TypeID = r.GetInt32(1);
                     article.TypeStr = r.GetString(2);
@@ -404,7 +479,8 @@ namespace DataAL
                     article.AuthorNameStr = r.GetString(6);
                     article.Title = r.GetString(7);
                     article.Content = r.GetString(8);
-                    article.Date = r.GetDateTime(9);
+                    DateTime date = r.GetDateTime(9);
+                    article.Date = date.Date;
                     article.UpdateDate = r.GetDateTime(10);
                     article.Upvote = r.GetInt32(11);
                     article.Downvote = r.GetInt32(12);
@@ -495,7 +571,7 @@ namespace DataAL
         {
             try
             {
-                
+
                 cmd.CommandText = "update Articles set TypeID=@typeid, CategoryID=@catid, UpdateDate=@ud, Allow_Comments=@ac," +
                     "IsActive=@ia, ImgLocation=@img, Title=@title, Content=@content where ArticleID=@aid";
                 cmd.Parameters.Clear();
@@ -518,9 +594,450 @@ namespace DataAL
             }
             finally
             {
-                con.Close();    
+                con.Close();
             }
         }
+
+
+       
         #endregion
+
+        #region Users
+        public List<Users> GetUsers()
+        {
+            List<Users> users = new List<Users>();
+            try
+            {
+                cmd.CommandText = "select U.UserID, R.RoleID, R.Name, U.Name, U.Username, U.Lastname, U.Email, U.Password, U.DateOfJoin, U.IsBanned from Users as U join Roles as R on U.RoleID = R.RoleID where R.RoleID=2";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Users user = new Users();
+                    user.UserID = reader.GetInt32(0);
+                    user.RoleID = reader.GetInt32(1);
+                    user.RoleName = reader.GetString(2);
+                    user.Name = reader.GetString(3);
+                    user.Username = reader.GetString(4);
+                    user.Lastname = reader.GetString(5);
+                    user.Email = reader.GetString(6);
+                    user.Password = reader.GetString(7);
+                    user.DateOfJoin = reader.GetDateTime(8);
+                    user.IsBanned = reader.GetBoolean(9);
+                    if (user.IsBanned == true)
+                    {
+                        user.IsBannedStr = "Banned";
+                    }
+                    else
+                    {
+                        user.IsBannedStr = "Not Banned";
+                    }
+                    users.Add(user);
+                }
+                return users;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public List<Users> GetUsersNormal()
+        {
+            List<Users> users = new List<Users>();
+            try
+            {
+                cmd.CommandText = "select U.UserID, R.RoleID, R.Name, U.Name, U.Username, U.Lastname, U.Email, U.Password, U.DateOfJoin, U.IsBanned from Users as U join Roles as R on U.RoleID = R.RoleID where R.RoleID=1";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Users user = new Users();
+                    user.UserID = reader.GetInt32(0);
+                    user.RoleID = reader.GetInt32(1);
+                    user.RoleName = reader.GetString(2);
+                    user.Name = reader.GetString(3);
+                    user.Username = reader.GetString(4);
+                    user.Lastname = reader.GetString(5);
+                    user.Email = reader.GetString(6);
+                    user.Password = reader.GetString(7);
+                    user.DateOfJoin = reader.GetDateTime(8);
+
+                    user.IsBanned = reader.GetBoolean(9);
+                    if (user.IsBanned == true)
+                    {
+                        user.IsBannedStr = "Banned";
+                    }
+                    else
+                    {
+                        user.IsBannedStr = "Not Banned";
+                    }
+                    users.Add(user);
+                }
+                return users;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        public int GetUserArticleCount(int userid)
+        {
+            try
+            {
+                cmd.CommandText = "select count(*) from Articles where AuthorID=@uid";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uid", userid);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                return num;
+            }
+            catch
+            {
+                return 0;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public int GetUserCommentCount(int userid)
+        {
+            try
+            {
+                cmd.CommandText = "select count(*) from Comments where UserID=@uid";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uid", userid);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                return num;
+            }
+            catch
+            {
+                return 0;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void UserChangeBanStatus(int id)
+        {
+            try
+            {
+                cmd.CommandText = "update Users set IsBanned= case when IsBanned=1 then 0 else 1 end where UserID=@id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public int CheckBan(string mail, string password)
+        {
+            try
+            {
+                cmd.CommandText = "select count(*) from Users where Username=@username and IsBanned=1";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@username", mail);
+                con.Open();
+                int number = Convert.ToInt32(cmd.ExecuteScalar());
+                return number;
+            }
+
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public Users UserLogin(string mail, string passsword)
+        {
+            try
+            {
+                cmd.CommandText = "select Count(*) from Users where Email=@ue and Password=@up";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@ue", mail);
+                cmd.Parameters.AddWithValue("@up", passsword);
+                con.Open();
+                int num = Convert.ToInt32(cmd.ExecuteScalar());
+                if (num >= 1)
+                {
+                    cmd.CommandText = "select U.UserID, R.RoleID, R.Name, U.Name, U.Username, U.Lastname, U.Email, U.Password, U.DateOfJoin, U.IsBanned from Users as U join Roles as R on U.RoleID = R.RoleID where Email=@ue and Password=@up";
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.AddWithValue("@ue", mail);
+                    cmd.Parameters.AddWithValue("@up", passsword);
+                    Users user = new Users();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+
+                        user.UserID = reader.GetInt32(0);
+                        user.RoleID = reader.GetInt32(1);
+                        user.RoleName = reader.GetString(2);
+                        user.Name = reader.GetString(3);
+                        user.Username = reader.GetString(4);
+                        user.Lastname = reader.GetString(5);
+                        user.Email = reader.GetString(6);
+                        user.Password = reader.GetString(7);
+                        user.DateOfJoin = reader.GetDateTime(8);
+                        user.IsBanned = reader.GetBoolean(9);
+                    }
+                    return user;
+
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+
+        #endregion
+
+        #region Article And Users
+        /// <summary>
+        /// Checks if the user has viewed the article before
+        /// </summary>
+        /// <param name="userid">Session User ID</param>
+        /// <param name="artid">Clicked Article ID</param>
+        /// <returns></returns>
+        public bool CheckViewed(int userid, int artid)
+        {
+            try
+            {
+                cmd.CommandText = "select count(*) from Viewed_Articles_ByUser where UserID=@uid and ArticleID=@aid";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uid", userid);
+                cmd.Parameters.AddWithValue("@aid", artid);
+                con.Open();
+                if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public bool CheckVoted(int userid, int artid)
+        {
+            try
+            {
+                cmd.CommandText = "select count(*) from Voted_Articles_ByUser where UserID=@uid and ArticleID=@aid";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uid", userid);
+                cmd.Parameters.AddWithValue("@aid", artid);
+                con.Open();
+                if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+        /// <summary>
+        /// Kullanıcının bir makaleye verdiği oyu kontrol eder.
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <param name="artid"></param>
+        /// <returns>1: Upvote, 2: Downvote, 3: Oy vermemiş, -1: Hata</returns>
+        public int GivenVote(int userid, int artid)
+        {
+            int voteStatus = 3;
+            SqlDataReader r = null; 
+
+            try
+            {
+                
+                cmd.CommandText = "select Upvote, Downvote from Voted_Articles_ByUser where UserID=@uid and ArticleID=@aid";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uid", userid);
+                cmd.Parameters.AddWithValue("@aid", artid);
+
+                con.Open();
+                r = cmd.ExecuteReader();
+
+                
+                if (r.Read())
+                {
+                    bool hasUpvoted = r.GetBoolean(0);
+                    bool hasDownvoted = r.GetBoolean(1);
+
+                    if (hasUpvoted)
+                    {
+                        voteStatus = 1; 
+                    }
+                    else if (hasDownvoted)
+                    {
+                        voteStatus = 2; 
+                    }
+                    
+                }
+                
+            }
+            catch 
+            {
+                voteStatus = -1; 
+            }
+            finally
+            {
+                
+                if (r != null && !r.IsClosed)
+                {
+                    r.Close();
+                }
+
+                
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+
+            return voteStatus;
+        }
+
+        public void HandleVote(int userid, int artid, bool isUpvoteClick)
+        {
+            int existingVote = GivenVote(userid, artid);
+
+            string sqlQuery = "";
+
+            if (isUpvoteClick)
+            {
+                if (existingVote == 1)
+                {
+                    sqlQuery = @"
+                DELETE FROM Voted_Articles_ByUser WHERE UserID=@uid AND ArticleID=@aid;
+                UPDATE Articles SET Upvote = Upvote - 1 WHERE ArticleID = @aid;";
+                }
+                else if (existingVote == 2)
+                {
+                    sqlQuery = @"
+                UPDATE Voted_Articles_ByUser SET Upvote = 1, Downvote = 0 WHERE UserID=@uid AND ArticleID=@aid;
+                UPDATE Articles SET Upvote = Upvote + 1, Downvote = Downvote - 1 WHERE ArticleID = @aid;";
+                }
+                else
+                {
+                    sqlQuery = @"
+                INSERT INTO Voted_Articles_ByUser (UserID, ArticleID, Upvote, Downvote) VALUES (@uid, @aid, 1, 0);
+                UPDATE Articles SET Upvote = Upvote + 1 WHERE ArticleID = @aid;";
+                }
+            }
+            else
+            {
+                if (existingVote == 1)
+                {
+                    sqlQuery = @"
+                UPDATE Voted_Articles_ByUser SET Upvote = 0, Downvote = 1 WHERE UserID=@uid AND ArticleID=@aid;
+                UPDATE Articles SET Upvote = Upvote - 1, Downvote = Downvote + 1 WHERE ArticleID = @aid;";
+                }
+                else if (existingVote == 2)
+                {
+                    sqlQuery = @"
+                DELETE FROM Voted_Articles_ByUser WHERE UserID=@uid AND ArticleID=@aid;
+                UPDATE Articles SET Downvote = Downvote - 1 WHERE ArticleID = @aid;";
+                }
+                else
+                {
+                    sqlQuery = @"
+                INSERT INTO Voted_Articles_ByUser (UserID, ArticleID, Upvote, Downvote) VALUES (@uid, @aid, 0, 1);
+                UPDATE Articles SET Downvote = Downvote + 1 WHERE ArticleID = @aid;";
+                }
+            }
+
+            if (string.IsNullOrEmpty(sqlQuery)) return;
+
+            cmd.CommandText = "BEGIN TRANSACTION; " + sqlQuery + " COMMIT TRANSACTION;";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@uid", userid);
+            cmd.Parameters.AddWithValue("@aid", artid);
+
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                if (con.State == System.Data.ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+
+        public void AddViewed(int userid, int artid)
+        {
+            try
+            {
+                cmd.CommandText = @"
+            BEGIN TRANSACTION;
+            INSERT INTO Viewed_Articles_ByUser (UserID, ArticleID) VALUES (@uid, @aid);
+            UPDATE Articles SET Views = Views + 1 WHERE ArticleID = @aid;
+            COMMIT TRANSACTION;";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@uid", userid);
+                cmd.Parameters.AddWithValue("@aid", artid);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
     }
+
+    #endregion
 }
+

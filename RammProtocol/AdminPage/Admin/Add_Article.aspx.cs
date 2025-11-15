@@ -75,6 +75,12 @@ namespace RammProtocol
                             string fullname = filename + ext;
                             article.ImgLocation = fullname;
                             fu_img.SaveAs(Server.MapPath("Assets/ArticleImgs/" + fullname));
+                            string path = Server.MapPath("~/Assets/Imgs/ArticleImgs/");
+                            if (!Directory.Exists(path))
+                            {
+                                Directory.CreateDirectory(path);
+                            }
+                            fu_img.SaveAs(Path.Combine(path, fullname));
                             if (data.AddArticle(article))
                             {
                                 Response.Redirect("ArticleControls.aspx");

@@ -63,7 +63,14 @@ namespace RammProtocol.AdminPage.Admin
 
         protected void btn_usercontrols_Click(object sender, EventArgs e)
         {
-
+            if (Session["Admin"] != null)
+            {
+                Response.Redirect("UsersAuthor.aspx");
+            }
+            else
+            {
+                Response.Redirect("LoginNew.aspx", false);
+            }
         }
 
         protected void btn_commentscontrols_Click(object sender, EventArgs e)

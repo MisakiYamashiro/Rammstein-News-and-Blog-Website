@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RammProtocol.master.cs" Inherits="RammProtocol.RammProtocol" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Rammstein Protocol</title>
+    <link href="~/Assets/CSS/Master.css" rel="stylesheet" runat="server" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="header">
+            <header>
+                <div class="header-background">
+                    <img src="<%= ResolveUrl("~/Assets/Imgs/upscaledbg.jpg") %>" class="bg-default" alt="Rammstein Background" />
+
+                    <img src="<%= ResolveUrl("~/Assets/Imgs/headerblack.png") %>" class="bg-hover" alt="Rammstein Black Background" />
+                </div>
+
+                <div class="header-content">
+
+                    <div class="logo-area">
+                        <img src="<%= ResolveUrl("~/Assets/Imgs/rm2.png") %>" alt="Rammstein Protocol Logo" />
+                        <h1>Rammstein Protocol</h1>
+                    </div>
+
+                    <div class="user-controls">
+                        <asp:Label ID="rp_lbl_username" runat="server" Text="Misakidev" Visible="false"></asp:Label>
+                        &nbsp;
+            <asp:LinkButton ID="rp_lbtn_logout" runat="server" Visible="false" OnClick="rp_lbtn_logout_Click">Logout</asp:LinkButton>
+                        &nbsp;
+            <asp:LinkButton ID="rp_lbtn_signin" runat="server" OnClick="rp_lbtn_signin_Click">Sign In</asp:LinkButton>
+                        &nbsp;
+            <asp:LinkButton ID="rp_lbtn_signup" runat="server" OnClick="rp_lbtn_signup_Click">Sign Up</asp:LinkButton>
+                    </div>
+
+                </div>
+                <div style="clear: both"></div>
+                <div class="navbar">
+                    <nav class="navbar-nav">
+                        <ul>
+                            <li class="ddl-container">
+                                <a href="Default.aspx">News</a>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Live</a>
+                                <ul class="bottom-menu">
+                                    <li><a href="live_concerts_scheduled.aspx">Concerts Scheduled</a></li>
+                                    <li><a href="live_tours.aspx">Tours</a></li>
+                                    <li><a href="#">Concerts History</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Rammstein</a>
+                                <ul class="bottom-menu">
+                                    <li><a href="rammstein-members.aspx">Members of Rammstein</a></li>
+                                    <li><a href="history-of-rammstein.aspx">History of Rammstein</a></li>
+                                    <li><a href="#">Equipment</a></li>
+                                    <li><a href="#">Rewards</a></li>
+                                    <li><a href="#">Minisites</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Discography</a>
+                                <ul class="bottom-menu">
+                                    <li><a href="#">Albums</a></li>
+                                    <li><a href="#">Singles</a></li>
+                                    <li><a href="#">Blu-rays, DVDs, VHSes</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                    <li><a href="#">Special items</a></li>
+                                    <li><a href="#">Books</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Lyrics</a>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Media</a>
+                                <ul class="bottom-menu">
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Youtube</a></li>
+                                    <li><a href="#">Wallpapers</a></li>
+                                    <li><a href="#">Downloads</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Site</a>
+                                <ul class="bottom-menu">
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="#">Terms of use</a></li>
+                                    <li><a href="#">Help Rammstein Protocol</a></li>
+                                    <li><a href="#">Links</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="ddl-container">
+                                <a href="#">Solo</a>
+                                <ul class="bottom-menu">
+                                    <li><a href="#">Lindemann World</a></li>
+                                    <li><a href="#">Emigrate World</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <asp:Panel ID="pnlArama" runat="server" DefaultButton="btn_silent">
+                        <asp:TextBox ID="tb_search" CssClass="search-box" runat="server" placeholder="Search..."></asp:TextBox>
+                        <asp:Button ID="btn_silent" runat="server" OnClick="btn_silent_Click" Style="display: none" />
+                    </asp:Panel>
+                </div>
+
+            </header>
+        </div>
+
+
+        <div style="clear: both"></div>
+
+        <div class="container">
+            <main>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </main>
+        </div>
+        <div style="clear: both"></div>
+
+
+
+    </form>
+    <div class="footer">
+        <footer>
+            <div class="footer-texts">
+                <div class="footer-atwebsite-text">
+                    <h2>About The Website</h2>
+                    <br />
+                    <p>
+                        Rammstein Protocol is a non-profit oriented website: all of the advertising revenue is used to finance the hosting.<br />
+
+                        Rammstein World is not affiliated to Rammstein. For more information, please read our terms of use page.
+                    </p>
+                </div>
+                <div class="footer-technology-text">
+                    <h2>Technology</h2>
+                    <br />
+                    <p>
+                        Conception, development and maintenance by Efe Palaz.
+                    <br />
+                        <br />
+
+
+                        Site created in compliance with W3C standards and accessibility, in CSS, HTML ASP.NET.
+                    </p>
+                </div>
+                <div class="footer-till-lindemann">
+                    <img src="Assets/Imgs/HOCAAAM4.png" alt="Till Lindemann" />
+                </div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+</html>

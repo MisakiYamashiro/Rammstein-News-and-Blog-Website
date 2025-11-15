@@ -10,3 +10,9 @@ C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\DataAL\
 C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\DataAL\obj\Debug\DataAL.csproj.CoreCompileInputs.cache
 C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\DataAL\obj\Debug\DataAL.dll
 C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\DataAL\obj\Debug\DataAL.pdb
+D:\New folder\DataAL\bin\Debug\DataAL.dll
+D:\New folder\DataAL\bin\Debug\DataAL.pdb
+D:\New folder\DataAL\obj\Debug\DataAL.csproj.AssemblyReference.cache
+D:\New folder\DataAL\obj\Debug\DataAL.csproj.CoreCompileInputs.cache
+D:\New folder\DataAL\obj\Debug\DataAL.dll
+D:\New folder\DataAL\obj\Debug\DataAL.pdb

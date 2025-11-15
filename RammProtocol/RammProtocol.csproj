@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -53,6 +56,24 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -84,6 +105,58 @@
     <Content Include="AdminPage\Admin\Assets\CSS\LoginNew.css" />
     <Content Include="AdminPage\Admin\ArticleControls.aspx" />
     <Content Include="AdminPage\Admin\EditArticle.aspx" />
+    <Content Include="AdminPage\Admin\UsersAuthor.aspx" />
+    <Content Include="AdminPage\Admin\UsersNormal.aspx" />
+    <Content Include="Assets\Imgs\Members\christian-flake-lorenz.jpg" />
+    <Content Include="Assets\Imgs\005.jpg" />
+    <Content Include="Assets\Imgs\006.jpg" />
+    <Content Include="Assets\Imgs\Members\christoph-doom-schneider.jpg" />
+    <Content Include="Assets\Imgs\Members\oliver-ollie-riedel.jpg" />
+    <Content Include="Assets\Imgs\Members\paul-landers.jpg" />
+    <Content Include="Assets\Imgs\Members\till-lindemann.jpg" />
+    <Content Include="Assets\Imgs\Tours\festivals-tour-2016-2017.jpg" />
+    <Content Include="Assets\Imgs\Tours\herzeleid-tour.jpg" />
+    <Content Include="Assets\Imgs\Tours\lifad-tour.jpg" />
+    <Content Include="Assets\Imgs\Tours\made-in-germany-tour.jpg" />
+    <Content Include="Assets\Imgs\Tours\mutter-tour.jpg" />
+    <Content Include="Assets\Imgs\Tours\new-years-eve-2018.jpg" />
+    <Content Include="Assets\Imgs\Tours\reise-reise-tour.jpg" />
+    <Content Include="Assets\Imgs\Tours\sehnsucht-tour.jpg" />
+    <Content Include="Assets\Imgs\Tours\stadium-tour.jpg" />
+    <Content Include="Assets\Imgs\upscaledbg.jpg" />
+    <Content Include="Assets\Imgs\background-lg3.jpg" />
+    <Content Include="Assets\CSS\Master.css" />
+    <Content Include="Assets\Imgs\background-lg.jpg" />
+    <Content Include="Assets\Imgs\background-lg2.jpg" />
+    <Content Include="Assets\Imgs\background-lg4.jpg" />
+    <Content Include="Assets\Imgs\CalendarDate.svg" />
+    <Content Include="Assets\Imgs\downvotesari.svg" />
+    <Content Include="Assets\Imgs\downvote.svg" />
+    <Content Include="Assets\Imgs\List.svg" />
+    <Content Include="Assets\Imgs\ramcon1.jpg" />
+    <Content Include="Assets\Imgs\ramcon2.jpg" />
+    <Content Include="Assets\Imgs\rm2.png" />
+    <Content Include="Assets\Imgs\headerblack.png" />
+    <Content Include="Assets\Imgs\HOCAAAM4.png" />
+    <Content Include="Assets\Imgs\Tours\club-tour.jpg" />
+    <Content Include="Assets\Imgs\upvotesari.svg" />
+    <Content Include="Assets\Imgs\upvote.svg" />
+    <Content Include="Assets\Imgs\UserOutlined.svg" />
+    <Content Include="Assets\Imgs\View.svg" />
+    <Content Include="Assets\Imgs\Members\richard-kruspe.jpg" />
+    <Content Include="christian-lorenz.aspx" />
+    <Content Include="christoph-schneider.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="history-of-rammstein.aspx" />
+    <Content Include="live_concerts_scheduled.aspx" />
+    <Content Include="live_tours.aspx" />
+    <Content Include="LoginUser.aspx" />
+    <Content Include="olivier-riedel.aspx" />
+    <Content Include="paul-landers.aspx" />
+    <Content Include="rammstein-members.aspx" />
+    <Content Include="richard-kruspe.aspx" />
+    <Content Include="till-lindemann.aspx" />
+    <Content Include="ViewArticle.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -157,11 +230,124 @@
     <Compile Include="AdminPage\Admin\EditArticle.aspx.designer.cs">
       <DependentUpon>EditArticle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPage\Admin\UsersAuthor.aspx.cs">
+      <DependentUpon>UsersAuthor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\UsersAuthor.aspx.designer.cs">
+      <DependentUpon>UsersAuthor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPage\Admin\UsersNormal.aspx.cs">
+      <DependentUpon>UsersNormal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPage\Admin\UsersNormal.aspx.designer.cs">
+      <DependentUpon>UsersNormal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="christian-lorenz.aspx.cs">
+      <DependentUpon>christian-lorenz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="christian-lorenz.aspx.designer.cs">
+      <DependentUpon>christian-lorenz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="christoph-schneider.aspx.cs">
+      <DependentUpon>christoph-schneider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="christoph-schneider.aspx.designer.cs">
+      <DependentUpon>christoph-schneider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="history-of-rammstein.aspx.cs">
+      <DependentUpon>history-of-rammstein.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history-of-rammstein.aspx.designer.cs">
+      <DependentUpon>history-of-rammstein.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="live_concerts_scheduled.aspx.cs">
+      <DependentUpon>live_concerts_scheduled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="live_concerts_scheduled.aspx.designer.cs">
+      <DependentUpon>live_concerts_scheduled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="live_tours.aspx.cs">
+      <DependentUpon>live_tours.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="live_tours.aspx.designer.cs">
+      <DependentUpon>live_tours.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUser.aspx.cs">
+      <DependentUpon>LoginUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginUser.aspx.designer.cs">
+      <DependentUpon>LoginUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="olivier-riedel.aspx.cs">
+      <DependentUpon>olivier-riedel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="olivier-riedel.aspx.designer.cs">
+      <DependentUpon>olivier-riedel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="paul-landers.aspx.cs">
+      <DependentUpon>paul-landers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="paul-landers.aspx.designer.cs">
+      <DependentUpon>paul-landers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RammProtocol.Master.cs">
+      <DependentUpon>RammProtocol.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RammProtocol.Master.designer.cs">
+      <DependentUpon>RammProtocol.Master</DependentUpon>
+    </Compile>
+    <Compile Include="rammstein-members.aspx.cs">
+      <DependentUpon>rammstein-members.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rammstein-members.aspx.designer.cs">
+      <DependentUpon>rammstein-members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="richard-kruspe.aspx.cs">
+      <DependentUpon>richard-kruspe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="richard-kruspe.aspx.designer.cs">
+      <DependentUpon>richard-kruspe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="till-lindemann.aspx.cs">
+      <DependentUpon>till-lindemann.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="till-lindemann.aspx.designer.cs">
+      <DependentUpon>till-lindemann.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewArticle.aspx.cs">
+      <DependentUpon>ViewArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewArticle.aspx.designer.cs">
+      <DependentUpon>ViewArticle.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AdminPage\Admin\Admin.Master" />
     <None Include="packages.config" />
+    <Content Include="RammProtocol.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,7 +357,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AdminPage\Admin\Assets\ArticleImgs\" />
-    <Folder Include="RammProtocol\" />
+    <Folder Include="Assets\Imgs\ArticleImgs\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAL\DataAL.csproj">

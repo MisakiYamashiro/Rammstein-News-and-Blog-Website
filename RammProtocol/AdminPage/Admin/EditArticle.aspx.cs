@@ -85,8 +85,16 @@ namespace RammProtocol
                 string ex = file.Extension;
                 if (ex == ".jpg" || ex == ".jpeg" || ex == ".png")
                 {
-                    ab.ImgLocation = guidname;
-                    fu_img.SaveAs(Server.MapPath("Assets/ArticleImgs/" + guidname));
+                    
+                    string extension = file.Extension;  
+                    string fullname = guidname + extension;
+                    ab.ImgLocation = fullname;
+                    fu_img.SaveAs(Server.MapPath("Assets/ArticleImgs/" + fullname));
+                    string path = Server.MapPath("~/Assets/Imgs/ArticleImgs/");
+                    if (!Directory.Exists(path))
+                    {
+                        Directory.CreateDirectory(path);
+                    }
                 }
                 else
                 {
