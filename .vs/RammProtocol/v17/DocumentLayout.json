@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\certifications.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\viewarticle.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\viewarticle.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\adminpage\\admin\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\adminpage\\admin\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\adminpage\\admin\\usersauthor.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\adminpage\\admin\\usersauthor.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\rammprotocol\\certifications.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\certifications.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -15,11 +31,11 @@
       "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\equipment-richard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\rewards-main.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\rammprotocol\\rewards-main.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\rewards-main.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|c:\\users\\efepa\\onedrive\\documenti\\github\\rammstein-news-and-blog-website\\rammprotocol\\rewards-main.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\rammprotocol\\rewards-main.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3451FF4-C083-43B6-A0B2-122FB1667972}|RammProtocol\\RammProtocol.csproj|solutionrelative:rammprotocol\\rewards-main.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -43,6 +59,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ViewArticle.aspx",
+              "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\ViewArticle.aspx",
+              "RelativeDocumentMoniker": "RammProtocol\\ViewArticle.aspx",
+              "ToolTip": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\ViewArticle.aspx",
+              "RelativeToolTip": "RammProtocol\\ViewArticle.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-25T20:21:22.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\Default.aspx",
+              "RelativeDocumentMoniker": "RammProtocol\\Default.aspx",
+              "ToolTip": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\Default.aspx",
+              "RelativeToolTip": "RammProtocol\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-25T20:20:03.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersAuthor.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\AdminPage\\Admin\\UsersAuthor.aspx.cs",
+              "RelativeDocumentMoniker": "RammProtocol\\AdminPage\\Admin\\UsersAuthor.aspx.cs",
+              "ToolTip": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\AdminPage\\Admin\\UsersAuthor.aspx.cs",
+              "RelativeToolTip": "RammProtocol\\AdminPage\\Admin\\UsersAuthor.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T20:17:14.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\AdminPage\\Admin\\Default.aspx",
+              "RelativeDocumentMoniker": "RammProtocol\\AdminPage\\Admin\\Default.aspx",
+              "ToolTip": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\AdminPage\\Admin\\Default.aspx",
+              "RelativeToolTip": "RammProtocol\\AdminPage\\Admin\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-11-25T20:16:35.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "certifications.aspx",
               "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\certifications.aspx",
               "RelativeDocumentMoniker": "RammProtocol\\certifications.aspx",
@@ -50,12 +118,11 @@
               "RelativeToolTip": "RammProtocol\\certifications.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-25T17:16:09.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:16:09.096Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Rewards-Main.aspx.cs",
               "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\Rewards-Main.aspx.cs",
               "RelativeDocumentMoniker": "RammProtocol\\Rewards-Main.aspx.cs",
@@ -63,12 +130,11 @@
               "RelativeToolTip": "RammProtocol\\Rewards-Main.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T17:03:54.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T17:03:54.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Rewards-Main.aspx",
               "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\Rewards-Main.aspx",
               "RelativeDocumentMoniker": "RammProtocol\\Rewards-Main.aspx",
@@ -76,12 +142,11 @@
               "RelativeToolTip": "RammProtocol\\Rewards-Main.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-25T16:16:37.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-25T16:16:37.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "equipment-richard.aspx",
               "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\equipment-richard.aspx",
               "RelativeDocumentMoniker": "RammProtocol\\equipment-richard.aspx",
@@ -89,8 +154,7 @@
               "RelativeToolTip": "RammProtocol\\equipment-richard.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-24T12:05:15.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-24T12:05:15.745Z"
             }
           ]
         },
@@ -100,7 +164,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Master.css",
               "DocumentMoniker": "C:\\Users\\efepa\\OneDrive\\Documenti\\GitHub\\Rammstein-News-and-Blog-Website\\RammProtocol\\Assets\\CSS\\Master.css",
               "RelativeDocumentMoniker": "RammProtocol\\Assets\\CSS\\Master.css",
