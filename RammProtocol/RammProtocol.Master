@@ -65,8 +65,8 @@
                                 <ul class="bottom-menu">
                                     <li><a href="rammstein-members.aspx">Members of Rammstein</a></li>
                                     <li><a href="history-of-rammstein.aspx">History of Rammstein</a></li>
-                                    <li><a href="#">Equipment</a></li>
-                                    <li><a href="#">Rewards</a></li>
+                                    <li><a href="equipment-choice-members.aspx">Equipment</a></li>
+                                    <li><a href="Rewards-Main.aspx">Rewards</a></li>
                                     <li><a href="#">Minisites</a></li>
                                 </ul>
                             </li>

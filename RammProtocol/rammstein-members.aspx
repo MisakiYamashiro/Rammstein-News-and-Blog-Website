@@ -13,7 +13,7 @@
             </div>
             <br />
             <br />
-            <p>Rammstein has six members: <a href="till-lindemann.aspx">Till Lindemann</a>, <a href="Richard-Z-Kruspe.aspx">Richard Z. Kruspe</a>, <a href="christian-lorenz.aspx">Christian Lorenz</a>, <a href="christoph-schneider.aspx">Christoph Schenider</a>, <a href="paul-landers.aspx">Paul Landers</a>, and  <a href="olivier-riedel.aspx">Olivier Riedel</a>. To see the detailed biographies and characteristics of these members, click on the text.</p>
+            <p>Rammstein has six members: <a href="till-lindemann.aspx">Till Lindemann</a>, <a href="richard-kruspe.aspx">Richard Z. Kruspe</a>, <a href="christian-lorenz.aspx">Christian Lorenz</a>, <a href="christoph-schneider.aspx">Christoph Schenider</a>, <a href="paul-landers.aspx">Paul Landers</a>, and  <a href="olivier-riedel.aspx">Olivier Riedel</a>. To see the detailed biographies and characteristics of these members, click on the text.</p>
         </div>
 
         

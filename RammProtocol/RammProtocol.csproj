@@ -107,6 +107,45 @@
     <Content Include="AdminPage\Admin\EditArticle.aspx" />
     <Content Include="AdminPage\Admin\UsersAuthor.aspx" />
     <Content Include="AdminPage\Admin\UsersNormal.aspx" />
+    <Content Include="Assets\Imgs\Equipment\baguette-vic-firth-1.png" />
+    <Content Include="Assets\Imgs\Equipment\baguettes-studio-2.jpg" />
+    <Content Include="Assets\Imgs\Equipment\baguettes-studio.jpg" />
+    <Content Include="Assets\Imgs\Equipment\christian-intro.jpg" />
+    <Content Include="Assets\Imgs\Equipment\christoph-schneider-signature.jpg" />
+    <Content Include="Assets\Imgs\Equipment\cymbales-sabian.jpg" />
+    <Content Include="Assets\Imgs\Equipment\ensoniq-asr-10.png" />
+    <Content Include="Assets\Imgs\Equipment\esp-eclipse-i-ctm-paul-landers-black.png" />
+    <Content Include="Assets\Imgs\Equipment\esp-eclipse-i-ctm-paul-landers-silver.png" />
+    <Content Include="Assets\Imgs\Equipment\esp-rzk-2-burnt.png" />
+    <Content Include="Assets\Imgs\Equipment\001.jpg" />
+    <Content Include="Assets\Imgs\Equipment\002.jpg" />
+    <Content Include="Assets\Imgs\Equipment\003.jpg" />
+    <Content Include="Assets\Imgs\Equipment\0042.jpg" />
+    <Content Include="Assets\Imgs\Equipment\0052.jpg" />
+    <Content Include="Assets\Imgs\Equipment\esp-rzk-1-burnt.png" />
+    <Content Include="Assets\Imgs\Equipment\esp-rzk-1-olympic-white.png" />
+    <Content Include="Assets\Imgs\Equipment\esp-rzk-1-satin-black.png" />
+    <Content Include="Assets\Imgs\Equipment\esp-rzk-1-titanium.png" />
+    <Content Include="Assets\Imgs\Equipment\fender-cn-90-1.png" />
+    <Content Include="Assets\Imgs\Equipment\gibson-j200.png" />
+    <Content Include="Assets\Imgs\Equipment\gibson-les-paul-custom.jpg" />
+    <Content Include="Assets\Imgs\Equipment\intro-doom.jpg" />
+    <Content Include="Assets\Imgs\Equipment\intro.jpg" />
+    <Content Include="Assets\Imgs\Equipment\introoliver.jpg" />
+    <Content Include="Assets\Imgs\Equipment\intropaul.jpg" />
+    <Content Include="Assets\Imgs\Equipment\live-1.jpg" />
+    <Content Include="Assets\Imgs\Equipment\roland-vr-760.jpg" />
+    <Content Include="Assets\Imgs\Equipment\sandberg-california-pm-custom-black.png" />
+    <Content Include="Assets\Imgs\Equipment\sandberg-california-pm-custom-green.png" />
+    <Content Include="Assets\Imgs\Equipment\sandberg-california-pm-custom-orange-yellow.png" />
+    <Content Include="Assets\Imgs\Equipment\sandberg-california-pm-custom-orange.png" />
+    <Content Include="Assets\Imgs\Equipment\sandberg-california-pm-custom-yellow.png" />
+    <Content Include="Assets\Imgs\Equipment\shure-520dx-green-bullet.png" />
+    <Content Include="Assets\Imgs\Equipment\shure-super-55-deluxe.png" />
+    <Content Include="Assets\Imgs\Equipment\sonor-sq2-red-tribal-live.jpg" />
+    <Content Include="Assets\Imgs\Equipment\sonor-sq2-red-tribal.jpg" />
+    <Content Include="Assets\Imgs\Equipment\studio.jpg" />
+    <Content Include="Assets\Imgs\intro-doom.jpg" />
     <Content Include="Assets\Imgs\Members\christian-flake-lorenz.jpg" />
     <Content Include="Assets\Imgs\005.jpg" />
     <Content Include="Assets\Imgs\006.jpg" />
@@ -114,6 +153,9 @@
     <Content Include="Assets\Imgs\Members\oliver-ollie-riedel.jpg" />
     <Content Include="Assets\Imgs\Members\paul-landers.jpg" />
     <Content Include="Assets\Imgs\Members\till-lindemann.jpg" />
+    <Content Include="Assets\Imgs\Rewards\awards.jpg" />
+    <Content Include="Assets\Imgs\Rewards\certifications.jpg" />
+    <Content Include="Assets\Imgs\Rewards\recompense.jpg" />
     <Content Include="Assets\Imgs\Tours\festivals-tour-2016-2017.jpg" />
     <Content Include="Assets\Imgs\Tours\herzeleid-tour.jpg" />
     <Content Include="Assets\Imgs\Tours\lifad-tour.jpg" />
@@ -144,9 +186,17 @@
     <Content Include="Assets\Imgs\UserOutlined.svg" />
     <Content Include="Assets\Imgs\View.svg" />
     <Content Include="Assets\Imgs\Members\richard-kruspe.jpg" />
+    <Content Include="certifications.aspx" />
     <Content Include="christian-lorenz.aspx" />
     <Content Include="christoph-schneider.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="equipment-choice-members.aspx" />
+    <Content Include="equipment-christian.aspx" />
+    <Content Include="equipment-schneider.aspx" />
+    <Content Include="equipment-olivier.aspx" />
+    <Content Include="equipment-paul.aspx" />
+    <Content Include="equipment-richard.aspx" />
+    <Content Include="equipment-till.aspx" />
     <Content Include="history-of-rammstein.aspx" />
     <Content Include="live_concerts_scheduled.aspx" />
     <Content Include="live_tours.aspx" />
@@ -154,6 +204,8 @@
     <Content Include="olivier-riedel.aspx" />
     <Content Include="paul-landers.aspx" />
     <Content Include="rammstein-members.aspx" />
+    <Content Include="RegisterUser.aspx" />
+    <Content Include="Rewards-Main.aspx" />
     <Content Include="richard-kruspe.aspx" />
     <Content Include="till-lindemann.aspx" />
     <Content Include="ViewArticle.aspx" />
@@ -244,6 +296,13 @@
     <Compile Include="AdminPage\Admin\UsersNormal.aspx.designer.cs">
       <DependentUpon>UsersNormal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="certifications.aspx.cs">
+      <DependentUpon>certifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="certifications.aspx.designer.cs">
+      <DependentUpon>certifications.aspx</DependentUpon>
+    </Compile>
     <Compile Include="christian-lorenz.aspx.cs">
       <DependentUpon>christian-lorenz.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,6 +323,55 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-choice-members.aspx.cs">
+      <DependentUpon>equipment-choice-members.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-choice-members.aspx.designer.cs">
+      <DependentUpon>equipment-choice-members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-christian.aspx.cs">
+      <DependentUpon>equipment-christian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-christian.aspx.designer.cs">
+      <DependentUpon>equipment-christian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-schneider.aspx.cs">
+      <DependentUpon>equipment-schneider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-schneider.aspx.designer.cs">
+      <DependentUpon>equipment-schneider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-olivier.aspx.cs">
+      <DependentUpon>equipment-olivier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-olivier.aspx.designer.cs">
+      <DependentUpon>equipment-olivier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-paul.aspx.cs">
+      <DependentUpon>equipment-paul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-paul.aspx.designer.cs">
+      <DependentUpon>equipment-paul.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-richard.aspx.cs">
+      <DependentUpon>equipment-richard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-richard.aspx.designer.cs">
+      <DependentUpon>equipment-richard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="equipment-till.aspx.cs">
+      <DependentUpon>equipment-till.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment-till.aspx.designer.cs">
+      <DependentUpon>equipment-till.aspx</DependentUpon>
     </Compile>
     <Compile Include="history-of-rammstein.aspx.cs">
       <DependentUpon>history-of-rammstein.aspx</DependentUpon>
@@ -321,6 +429,20 @@
     </Compile>
     <Compile Include="rammstein-members.aspx.designer.cs">
       <DependentUpon>rammstein-members.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterUser.aspx.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegisterUser.aspx.designer.cs">
+      <DependentUpon>RegisterUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rewards-Main.aspx.cs">
+      <DependentUpon>Rewards-Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rewards-Main.aspx.designer.cs">
+      <DependentUpon>Rewards-Main.aspx</DependentUpon>
     </Compile>
     <Compile Include="richard-kruspe.aspx.cs">
       <DependentUpon>richard-kruspe.aspx</DependentUpon>

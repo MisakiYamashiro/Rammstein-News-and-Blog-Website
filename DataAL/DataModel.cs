@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -88,7 +89,7 @@ namespace DataAL
         {
             try
             {
-                cmd.CommandText = "select count(*) from Articles where IsActive=1";
+                cmd.CommandText = "select count(*) from Articles";
                 cmd.Parameters.Clear();
                 con.Open();
                 int num = Convert.ToInt32(cmd.ExecuteScalar());
@@ -599,7 +600,7 @@ namespace DataAL
         }
 
 
-       
+
         #endregion
 
         #region Users
@@ -817,6 +818,34 @@ namespace DataAL
             }
         }
 
+        public bool UserRegister(Users user)
+        {
+            try
+            {
+                cmd.CommandText = "insert into Users(RoleID, Name, Username,Lastname,Email,Password,DateOfJoin,IsBanned) values(1,@name,@username,@lastname,@email,@password,@dateofjoin,@isbanned)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@name", user.Name);
+                cmd.Parameters.AddWithValue("@username", user.Username);
+                cmd.Parameters.AddWithValue("@lastname", user.Lastname);
+                cmd.Parameters.AddWithValue("@email", user.Email);
+                cmd.Parameters.AddWithValue("@password", user.Password);
+                cmd.Parameters.AddWithValue("@dateofjoin", user.DateOfJoin);
+                cmd.Parameters.AddWithValue("@isbanned", user.IsBanned);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
 
         #endregion
 
@@ -883,11 +912,11 @@ namespace DataAL
         public int GivenVote(int userid, int artid)
         {
             int voteStatus = 3;
-            SqlDataReader r = null; 
+            SqlDataReader r = null;
 
             try
             {
-                
+
                 cmd.CommandText = "select Upvote, Downvote from Voted_Articles_ByUser where UserID=@uid and ArticleID=@aid";
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@uid", userid);
@@ -896,7 +925,7 @@ namespace DataAL
                 con.Open();
                 r = cmd.ExecuteReader();
 
-                
+
                 if (r.Read())
                 {
                     bool hasUpvoted = r.GetBoolean(0);
@@ -904,29 +933,29 @@ namespace DataAL
 
                     if (hasUpvoted)
                     {
-                        voteStatus = 1; 
+                        voteStatus = 1;
                     }
                     else if (hasDownvoted)
                     {
-                        voteStatus = 2; 
+                        voteStatus = 2;
                     }
-                    
+
                 }
-                
+
             }
-            catch 
+            catch
             {
-                voteStatus = -1; 
+                voteStatus = -1;
             }
             finally
             {
-                
+
                 if (r != null && !r.IsClosed)
                 {
                     r.Close();
                 }
 
-                
+
                 if (con.State == System.Data.ConnectionState.Open)
                 {
                     con.Close();
@@ -1036,8 +1065,89 @@ namespace DataAL
                 con.Close();
             }
         }
-    }
+    
 
     #endregion
+
+        #region Comments
+        public bool WriteComment(Comments com)
+        {
+            try
+            {
+                cmd.CommandText = "insert into Comments(UserID, Content,Date,Upvote,Downvote,IsActive) values(@userid,@content,@date,@upvote,@downvote,@isactive)";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@userid", com.UserID);
+                cmd.Parameters.AddWithValue("@content", com.Content);
+                cmd.Parameters.AddWithValue("@date", com.Date);
+                cmd.Parameters.AddWithValue("@upvote", com.Upvote);
+                cmd.Parameters.AddWithValue("@downvote", com.Downvote);
+                cmd.Parameters.AddWithValue("@isactive", com.IsActive);
+                con.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        public List<Comments> GetComments()
+        {
+            try
+            {
+                List<Comments> list = new List<Comments>();
+                cmd.CommandText = "select CommentID, UserID, Content, Date, Upvote, Downvote, IsActive from Comments";
+                cmd.Parameters.Clear();
+                con.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Comments com = new Comments();
+                    com.CommentID = reader.GetInt32(0);
+                    com.UserID = reader.GetInt32(1);
+                    com.Content = reader.GetString(2);
+                    com.Date = reader.GetDateTime(3);
+                    com.Upvote = reader.GetInt32(4);
+                    com.Downvote = reader.GetInt32(5);
+                    com.IsActive = reader.GetBoolean(6);
+                    list.Add(com);
+                }
+                return list;
+            }
+            catch
+            {
+                return null;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void DeleteComment(int commentid)
+        {
+            try
+            {
+                cmd.CommandText = "delete from Comments where CommentID=@comid";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@comid", commentid);
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        #endregion
+    }
 }
 

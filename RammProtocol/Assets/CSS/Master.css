@@ -276,7 +276,7 @@ html, body {
 
 .article {
     display: flex;
-    align-items: flex-start; /* Üstten hizalama */
+    align-items: flex-start; 
     gap: 32px;
     margin-bottom: 32px;
 }
@@ -305,7 +305,7 @@ html, body {
 .article-img-col {
     flex: 0 0 160px;
     display: flex;
-    align-items: flex-start; /* Üstten hizalama */
+    align-items: flex-start; 
     justify-content: center;
 }
 
@@ -669,6 +669,11 @@ html, body {
     height: 600px;
 }
 
+.member-detail2 {
+    width: 600px;
+    height: 400px;
+}
+
 hr {
     color: #1F1F1F;
 }
@@ -702,9 +707,143 @@ hr {
 
         .member-biography-text a:hover {
             text-decoration: underline;
-        }   
+        }
 
 .member-biography {
     margin: 0;
 }
 
+.equipment-imgs {
+    display: flex;
+}
+
+    .equipment-imgs img {
+        width: 300px;
+        margin: 10px;
+        margin-right: 100px;
+    }
+
+.text-header {
+    width: 100%;
+    background-color: #0a0a0a;
+    margin: 20px 0;
+}
+
+    .text-header h2 {
+        padding: 7px 0;
+        padding-left: 15px;
+        color: #D3B782;
+    }
+
+.text-align-center {
+    text-align: center;
+    margin: 7px 0;
+}
+
+.text-header-yandan-yemis {
+    width: 100%;
+    background-color: #2a2a2a;
+    margin: 20px 0;
+}
+
+    .text-header-yandan-yemis h3 {
+        padding: 10px 0;
+        padding-left: 15px;
+        color: white;
+    }
+
+.specifications h4 {
+    border-bottom: 1px solid #333333;
+    padding: 10px 0;
+}
+
+    .specifications h4:hover {
+        background-color: rgba(0,0,0,0.75);
+    }
+
+.southside {
+    width:300px;
+    float: left;
+}
+.westside {
+    float: right;
+    width:300px;
+}
+
+.write-comment-container {
+    margin-top: 25px;
+}
+
+.write-comment {
+    border: 1px solid #111111;
+    width: 600px;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+}
+
+    .write-comment label {
+        width: 100%; 
+        padding-bottom: 10px;
+        color: #D3B782;
+        font-weight: 600;
+        font-size: 16pt;
+        display: block;
+    }
+
+.textbox_com {
+    width: 400px;
+    height: 40px;
+    
+    margin-right: 10px; 
+    resize: none; 
+}
+
+.button_com {
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 12pt;
+    color: #D3B782;
+    cursor: pointer;
+    background-color: #111111;
+    font-weight: 600;
+    font-family: Inter;
+    border: 1px solid #111111;
+}
+.button_com:hover {
+    background-color:#222222;
+}
+.certification-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+    .certification-table th {
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 15px 10px;
+        color: #ffffff;
+    }
+
+    .certification-table td {
+        padding: 12px 10px;
+        color: #eeeeee;
+        border-bottom: 1px solid #333;
+    }
+
+        .certification-table td:first-child {
+            font-size: 1.1rem;
+        }
+
+    .certification-table tr:last-child td {
+        border-bottom: none;
+    }

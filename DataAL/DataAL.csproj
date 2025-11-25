@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Articles.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Comments.cs" />
     <Compile Include="ConStrings.cs" />
     <Compile Include="DataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

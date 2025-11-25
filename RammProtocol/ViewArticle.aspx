@@ -47,9 +47,24 @@
         <asp:Label ID="lbl_title" runat="server" Text="sdfgfsdgsfjgfopsjfgopsjfosjf" CssClass="viewArticle-title"></asp:Label>
         <br />
         <br />
-        <asp:Image ID="img_articleimg" runat="server" CssClass="viewArticle-img"/>
+        <asp:Image ID="img_articleimg" runat="server" CssClass="viewArticle-img" />
         <br />
         <br />
         <asp:Label ID="lbl_content" runat="server" Text="adjaspdaodhadahd" CssClass="viewArticle-content"></asp:Label>
+
+        <div class="write-comment-container">
+            <div class="write-comment">
+                <label>Write a Comment</label>
+                <asp:TextBox ID="tb_comment" runat="server" CssClass="textbox_com" TextMode="MultiLine"></asp:TextBox>
+                <asp:Button ID="btn_uploadcomment" runat="server" Text="Upload" CssClass="button_com" />
+                
+
+            </div>
+        </div>
+        <div class="comments-container">
+            <asp:Repeater ID="rp_comments" runat="server">
+                <asp:Label ID="lbl_comment_author" runat="server" Text='<%# Eval("UserStr") %>'></asp:Label>
+            </asp:Repeater>
+        </div>
     </div>
 </asp:Content>

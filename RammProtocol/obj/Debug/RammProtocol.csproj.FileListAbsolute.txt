@@ -194,3 +194,16 @@ D:\New folder\RammProtocol\bin\System.Web.Razor.xml
 D:\New folder\RammProtocol\bin\System.Web.WebPages.xml
 D:\New folder\RammProtocol\bin\System.Web.WebPages.Deployment.xml
 D:\New folder\RammProtocol\bin\System.Web.WebPages.Razor.xml
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.Helpers.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.Mvc.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.Razor.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.WebPages.Deployment.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.WebPages.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.WebPages.Razor.dll
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.Helpers.xml
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.Mvc.xml
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.Razor.xml
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.WebPages.xml
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.WebPages.Deployment.xml
+C:\Users\efepa\OneDrive\Documenti\GitHub\Rammstein-News-and-Blog-Website\RammProtocol\bin\System.Web.WebPages.Razor.xml
